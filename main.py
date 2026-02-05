@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
 from users import router as users_router
 from chat import router as chat_router
 from auth import router as auth_router
@@ -25,4 +24,5 @@ app.include_router(skin_router)
 @app.get("/")
 def home():
     return {"message": "Welcome to Hamsaaya Backend ❤️"}
+
 
